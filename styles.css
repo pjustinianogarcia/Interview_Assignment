@@ -1,0 +1,16 @@
+.image-container {
+    display: grid;
+    grid-template-rows: 1 fr ;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.item {
+    border: 1px solid black
+}
+
+.img {
+    width: 400px;
+    height: 500px;
+    gap: 30px;
+}
