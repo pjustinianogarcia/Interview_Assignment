@@ -5,12 +5,11 @@
     
 }
 
-.item {
-    border: 1px solid black
-}
 
-.img {
+img {
     width: 400px;
     height: 500px;
     gap: 30px;
+    border: 1px solid black;
+    margin: 20px;
 }
