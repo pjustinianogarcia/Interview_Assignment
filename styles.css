@@ -22,3 +22,16 @@ img {
    
 }
 
+.searchImg {
+    margin: 20px;
+    padding: 10px;
+   
+    border-radius: 3px;
+}
+
+.button {
+    padding: 10px;
+   
+    border-radius: 3px;
+}
+

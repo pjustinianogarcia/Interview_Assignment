@@ -14,13 +14,17 @@ fetch("https://fakestoreapi.com/products?limit=9")
 });
 
     //function to display each products
-    function displayProducts(product){
+    function displayProducts(products){
 
     //get the imageGrid div form the HTML
     const imageGrid = document.getElementById("imageGrid");
 
+    imageGrid.innerHTML = "";
+
+   
+
     //created a card for each product
-      allProducts.forEach((product) => {
+      products.forEach((product) => {
       const productCard = document.createElement("div");
       productCard.classList.add("productCard");
 
@@ -51,6 +55,23 @@ fetch("https://fakestoreapi.com/products?limit=9")
   };
 
 
+// function for search functionality
+function search() {
+    const input = document.getElementById("searchImg").value.toLowerCase();
+    
+  
+    // function to filter products
+    const filteredProducts = allProducts.filter((product) =>
+      product.title.toLowerCase().includes(input)
+    );
+  
+  
+    // callback to filter products
+    displayProducts(filteredProducts);
+  }
+
+
+ 
 
 
  
