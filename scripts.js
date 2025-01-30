@@ -70,8 +70,18 @@ function search() {
     displayProducts(filteredProducts);
   }
 
+//function to filter by price
+ function filterByPrice() {
+    const maxPrice = document.getElementById("priceRange").value;
+    //update the max price to be the input of the range
+    document.getElementById("priceValue").textContent = maxPrice;
 
- 
+    // filter products if they meet the condition
+    const filteredProducts = allProducts.filter((product) =>
+        product.price <= maxPrice);
 
+    //display the filtered prodcuts
+    displayProducts(filteredProducts);
 
- 
+ }
+
