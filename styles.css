@@ -1,3 +1,5 @@
+
+
 .imageGrid {
     display: grid;
     grid-template-rows: 1 fr ;
@@ -9,5 +11,14 @@
 img {
     width: 400px;
     height: 500px;
+}
+
+.productCard {
+    border: solid 1px black;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
 
