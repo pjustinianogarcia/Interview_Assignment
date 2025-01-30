@@ -1,14 +1,26 @@
 //scripts.js
 
+//store products in an array
+let allProducts = [];
+
 //fetch 9 products from api
 fetch("https://fakestoreapi.com/products?limit=9")
   .then((response) => response.json())
   .then((json) => {
+
+    //store all fetch products in an array
+    allProducts = json
+    displayProducts(allProducts);
+});
+
+    //function to display each products
+    function displayProducts(product){
+
     //get the imageGrid div form the HTML
     const imageGrid = document.getElementById("imageGrid");
 
     //created a card for each product
-    json.forEach((product) => {
+      allProducts.forEach((product) => {
       const productCard = document.createElement("div");
       productCard.classList.add("productCard");
 
@@ -34,5 +46,11 @@ fetch("https://fakestoreapi.com/products?limit=9")
 
       //append the product  card to the HTML image grid
       imageGrid.appendChild(productCard);
+    
     });
-  });
+  };
+
+
+
+
+ 
