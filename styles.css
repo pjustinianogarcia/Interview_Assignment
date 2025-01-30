@@ -1,4 +1,4 @@
-.image-container {
+.imageGrid {
     display: grid;
     grid-template-rows: 1 fr ;
     grid-template-columns: 1fr 1fr 1fr;
@@ -9,7 +9,5 @@
 img {
     width: 400px;
     height: 500px;
- 
-    
 }
 
