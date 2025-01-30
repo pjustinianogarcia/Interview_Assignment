@@ -54,6 +54,11 @@ This application fetches products from [Fake Store API](https://fakestoreapi.com
 
 - The displayed products are updated dynamically as the price range changes.
 
+### Clear Filters
+
+- Adds a button that trigger the `clearFilters()` function when clicked.
+- Resets both the `search by name` and `filter by price` functionality.
+
 
 
 
