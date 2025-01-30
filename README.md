@@ -32,9 +32,9 @@ This application fetches products from [Fake Store API](https://fakestoreapi.com
 ### Displaying Products
 
 - The displayProducts function creates a product card for each product containing:
-- **Product image**
-- **Product title**
-- **Product price**
+   - **Product image**
+   - **Product title**
+   - **Product price**
 
 - The cards are appended to the imageGrid div in the HTML.
 
