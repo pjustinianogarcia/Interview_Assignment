@@ -15,9 +15,15 @@ json.forEach(product => {
 
     
 
+    const title = document.createElement("div");
+    title.textContent = product.title
+
+    const price = document.createElement("div")
+    price.textContent = `$${product.price.toFixed(2)}`
 
     productCard.appendChild(image);
-
+    productCard.appendChild(title);
+    productCard.appendChild(price);
 
     imageGrid.appendChild(productCard)
 });
