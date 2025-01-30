@@ -9,8 +9,8 @@
 
 
 img {
-    width: 400px;
-    height: 500px;
+    width: 350px;
+    height: 450px;
 }
 
 .productCard {
@@ -33,5 +33,11 @@ img {
     padding: 10px;
    
     border-radius: 3px;
+}
+
+.priceRange {
+    
+    margin: 10px;
+    padding: 10px;
 }
 
