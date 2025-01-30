@@ -1,33 +1,38 @@
-fetch('https://fakestoreapi.com/products?limit=9')
-            .then(response=>response.json())
-            .then(json=> { 
+//scripts.js
 
+//fetch 9 products from api
+fetch("https://fakestoreapi.com/products?limit=9")
+  .then((response) => response.json())
+  .then((json) => {
+    //get the imageGrid div form the HTML
+    const imageGrid = document.getElementById("imageGrid");
 
-const imageGrid = document.getElementById("imageGrid");
+    //created a card for each product
+    json.forEach((product) => {
+      const productCard = document.createElement("div");
+      productCard.classList.add("productCard");
 
-json.forEach(product => {
-   const productCard = document.createElement("div");
-   productCard.classList.add("productCard")
+      // create an img element with src and alt attributes
+      const image = document.createElement("img");
+      image.src = product.image;
+      image.alt = product.tittle;
 
-    const image = document.createElement("img");
-    image.src = product.image;
-    image.alt = product.tittle;
+      //created title div
+      const title = document.createElement("div");
+      title.classList.add("title");
+      title.textContent = product.title;
 
-    
+      //created price div
+      const price = document.createElement("div");
+      price.classList.add("price");
+      price.textContent = `$${product.price.toFixed(2)}`;
 
-    const title = document.createElement("div");
-    title.classList.add("title")
-    title.textContent = product.title
+      //append image, title, and price to the product card
+      productCard.appendChild(image);
+      productCard.appendChild(title);
+      productCard.appendChild(price);
 
-    const price = document.createElement("div")
-    price.classList.add("price")
-    price.textContent = `$${product.price.toFixed(2)}`
-
-    productCard.appendChild(image);
-    productCard.appendChild(title);
-    productCard.appendChild(price);
-
-    imageGrid.appendChild(productCard)
-});
-});
-
+      //append the product  card to the HTML image grid
+      imageGrid.appendChild(productCard);
+    });
+  });
