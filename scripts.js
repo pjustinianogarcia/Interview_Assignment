@@ -85,3 +85,14 @@ function search() {
 
  }
 
+ // function to clear all filters
+function clearFilters() {
+    //get all of the inputs by id and reset them
+    document.getElementById("searchImg").value = ""; 
+    document.getElementById("priceRange").value = 700; 
+    document.getElementById("priceValue").textContent = "700"; 
+    
+    //display all products again
+    displayProducts(allProducts); 
+}
+
