@@ -1,10 +1,15 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+body {
+    background-color:rgb(242, 242, 233);
+}
 
 .imageGrid {
     display: grid;
     grid-template-rows: 1 fr ;
     grid-template-columns: 1fr 1fr 1fr;
-    
 }
 
 
@@ -14,29 +19,26 @@ img {
 }
 
 .productCard {
-    border: solid 1px black;
+    border: solid 5px rgb(236, 230, 223);
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    background-color: white;
 }
 
 .searchImg {
     margin: 20px;
     padding: 10px;
-   
     border-radius: 3px;
 }
 
 .button {
     padding: 10px;
-   
     border-radius: 3px;
 }
 
 .priceRange {
-    
     margin: 10px;
     padding: 10px;
 }

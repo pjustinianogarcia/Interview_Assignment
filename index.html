@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
+    <!--search bar-->
     <input class="searchImg" type="text" id="searchImg" placeholder="search by name">
     <button class="button" onClick="search()">Search</button>
-
+    <!--price range-->
     <div class="priceRange">
-    <label for="priceRange">Max Price $<span id="priceValue">700</span></label>
-    <input type="range" id="priceRange" min="0" max="700" value="700" step="10" oninput="filterByPrice()">
+        <label for="priceRange">Max Price $<span id="priceValue">700</span></label>
+        <input type="range" id="priceRange" min="0" max="700" value="700" step="10" oninput="filterByPrice()">
     </div>
-
+    <!--image grid-->
     <div class="imageGrid" id="imageGrid">
     </div>
-    
+
     <script src="scripts.js"></script>
 
 </body>
+
 </html>
